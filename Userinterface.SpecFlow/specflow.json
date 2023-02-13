@@ -1,0 +1,6 @@
+﻿{
+    "runtime": {
+        "stopAtFirstError": true,
+        "missingOrPendingStepsOutcome": "Error"
+    }
+}
