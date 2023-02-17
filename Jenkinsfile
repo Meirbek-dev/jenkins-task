@@ -13,9 +13,15 @@ pipeline {
       }
     }
 
-    stage('Save Log') {
+    stage('Generate Test Report') {
       steps {
-        archiveArtifacts 'Userinterface.SpecFlow\\Log\\log.log'
+        sh 'livingdoc test-assembly Userinterface.SpecFlow\\\\bin\\\\Debug\\\\net7.0\\\\Userinterface.SpecFlow.dll -t Userinterface.SpecFlow\\bin\\x86\\Debug\\net7.0\\TestExecution.json'
+      }
+    }
+
+    stage('Save Test Report') {
+      steps {
+        archiveArtifacts 'LivingDoc.html'
       }
     }
 
