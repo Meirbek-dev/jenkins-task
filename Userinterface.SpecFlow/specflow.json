@@ -1,6 +1,10 @@
 ﻿{
     "runtime": {
         "stopAtFirstError": true,
-        "missingOrPendingStepsOutcome": "Error"
+        "missingOrPendingStepsOutcome": "Error",
+        "livingDocGenerator": {
+            "enabled": true,
+            "filePath": "TestExecution_{Now}.json"
+        }
     }
 }
