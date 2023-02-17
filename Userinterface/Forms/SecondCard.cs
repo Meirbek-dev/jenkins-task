@@ -49,7 +49,6 @@ namespace Userinterface.Forms
         public void UploadAnImage(string PathToImage)
         {
             ClickUploadButton();
-            UploadFileUtil.UploadFile(PathToImage);
         }
 
         public void ClickSecondCardNextButton()

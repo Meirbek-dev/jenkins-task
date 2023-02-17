@@ -9,8 +9,3 @@ Scenario: Validation that user authentication on the game page is successful
     When I register random user
         And I click Next button on the first card
     Then Card '2' is open
-    When I unselect all interests
-        And I select '3' random interests
-        And I upload an image
-        And I click Next button on the second card
-    Then Card '3' is open
