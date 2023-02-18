@@ -15,7 +15,6 @@ pipeline {
 
     stage('Generate Test Report') {
       steps {
-        pwsh 'livingdoc test-assembly Userinterface.SpecFlow\\bin\\Debug\\net7.0\\Userinterface.SpecFlow.dll -t Userinterface.SpecFlow\\bin\\Debug\\net7.0\\TestExecution.json'
         powershell 'livingdoc test-assembly Userinterface.SpecFlow\\bin\\Debug\\net7.0\\Userinterface.SpecFlow.dll -t Userinterface.SpecFlow\\bin\\Debug\\net7.0\\TestExecution.json'
       }
     }
