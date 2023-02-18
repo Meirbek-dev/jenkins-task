@@ -9,13 +9,13 @@ pipeline {
 
     stage('Test') {
       steps {
-        vsTest(testFiles: '$BUILDPATH\\Userinterface.SpecFlow.dll', useVs2017Plus: true)
+        vsTest(testFiles: '${BUILD_PATH}\\Userinterface.SpecFlow.dll', useVs2017Plus: true)
       }
     }
 
     stage('Generate Test Report') {
       steps {
-        powershell 'livingdoc test-assembly $BUILDPATH\\Userinterface.SpecFlow.dll -t $BUILDPATH\\TestExecution.json'
+        powershell 'livingdoc test-assembly ${BUILD_PATH}\\Userinterface.SpecFlow.dll -t ${BUILD_PATH}\\TestExecution.json'
       }
     }
 
@@ -27,6 +27,6 @@ pipeline {
 
   }
   environment {
-    BUILDPATH = 'Userinterface.SpecFlow\\bin\\Debug\\net7.0'
+    BUILD_PATH = 'Userinterface.SpecFlow\\bin\\Debug\\net7.0'
   }
 }
