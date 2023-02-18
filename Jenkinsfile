@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    BUILD_PATH = 'Userinterface.SpecFlow\\bin\\Debug\\net7.0'
+  }
   stages {
     stage('Build') {
       steps {
@@ -25,8 +28,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    BUILD_PATH = 'Userinterface.SpecFlow\\bin\\Debug\\net7.0'
   }
 }
